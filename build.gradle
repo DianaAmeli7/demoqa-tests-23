@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 repositories {
@@ -8,6 +8,12 @@ repositories {
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:6.19.1"
-    }
+            "org.junit.jupiter:junit-jupiter:5.10.0",
+            "org.seleniumhq.selenium:selenium-java:4.15.0",
+            "io.github.bonigarcia:webdrivermanager:5.6.0"
+    )
+}
+
+test {
+    useJUnitPlatform()
 }
